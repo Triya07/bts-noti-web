@@ -43,7 +43,7 @@ function App() {
     }
 
     if (!socketRef.current) {
-      const socket = io("http://localhost:3000", {
+      const socket = io("https://bts-noti-web.onrender.com", {
         transports: ["websocket"],
         upgrade: false
       });
@@ -88,7 +88,7 @@ function App() {
     if (!nickname.trim()) return;
 
     try {
-      const res = await fetch("http://localhost:3000/register", {
+      const res = await fetch("https://bts-noti-web.onrender.com/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nickname }),
@@ -116,7 +116,7 @@ function App() {
         "BLEuZFY064dYuBtZzErjsHJ30Vf15_Tw5v2nYuOYBjMyqes7bm-BYaN75eLLBOHS6HaSUJsEqXxSSiGD7hPrzRA"
       ),
     });
-    await fetch("http://localhost:3000/subscribe", {
+    await fetch("https://bts-noti-web.onrender.com/subscribe", {
       method: "POST",
       body: JSON.stringify(subscription),
       headers: { "Content-Type": "application/json" },
