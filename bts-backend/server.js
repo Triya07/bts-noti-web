@@ -21,7 +21,10 @@ const io = new Server(httpServer, {
 
 const PORT = process.env.PORT || 3000;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b650dec759a35d71a8fc100c8578e3411c598c99
 // Middleware
 app.use(cors());
 app.use(express.json());
